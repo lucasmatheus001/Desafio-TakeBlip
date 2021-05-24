@@ -7,6 +7,4 @@ app.use(cors());
 app.use(express.json())
 
 app.use('/api', require('./src/controllers/TakeDesafios').router)
-app.listen(port, () => {
-    console.log('Escutando na porta: ' + port)
-})
+app.listen(process.env.PORT || 4000)
